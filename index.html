@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="screen">
+            <div class="current" data-operant-current></div>
+        </section>
+
+        <section class="cal-btn_row">
+            <div class="cal_btn_row">
+                <button class="cal_btn double" data-all-clear>c</button>
+                <button class="cal_btn" data-delete><</button>
+                <button class="cal_btn cal" data-operation>÷</button>
+            </div>
+            <div class="cal_btn_row">
+                <button class="cal_btn" data-number>7</button>
+                <button class="cal_btn" data-number>8</button>
+                <button class="cal_btn" data-number>9</button>
+                <button class="cal_btn cal" data-operation>x</button>
+            </div>
+            <div class="cal_btn_row">
+                <button class="cal_btn" data-number>4</button>
+                <button class="cal_btn" data-number>5</button>
+                <button class="cal_btn" data-number>6</button>
+                <button class="cal_btn cal" data-operation>-</button>
+            </div>
+            <div class="cal_btn_row">
+                <button class="cal_btn" data-number>1</button>
+                <button class="cal_btn" data-number>2</button>
+                <button class="cal_btn" data-number>3</button>
+                <button class="cal_btn cal" data-operation>+</button>
+            </div>
+            <div class="cal_btn_row">
+                <button class="cal_btn">.</button>
+                <button class="cal_btn double" data-number>0</button>
+                <button class="cal_btn cal" data-equals>=</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
