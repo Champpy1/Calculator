@@ -17,23 +17,27 @@ class Calculator {
         this.clear();
     }
 
-    clear() {
+    clear() 
+    {
         this.currentOperand = "";
         this.previousOperand = "";
         this.operation = null;
     }
 
-    delete() {
+    delete() 
+    {
         this.currentOperand = this.currentOperand.toString().slice(0,-1);
     }
 
-    appendNumber(number) {
+    appendNumber(number) 
+    {
         if(number === '.' && this.currentOperand.includes('.'))
         return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
-    flushOperator(operation) {
+    flushOperator(operation) 
+    {
         if(this.currentOperand === "") return;
         if(this.previousOperand !== "") {
             this.compute();
@@ -43,13 +47,14 @@ class Calculator {
         this.currentOperand = "";
     }
 
-    compute() {
+    compute() 
+    {
         let computation;
         const previous = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
 
         if(isNaN(previous) || isNaN(current)) return;
-        switch(this.operaion){
+        switch(this.operation){
             case "+":
                 computation = previous + current;
             break;
@@ -70,13 +75,16 @@ class Calculator {
         this.operation = undefined;
     }
 
-    updateDisplay(){
+    updateDisplay()
+    {
         this.currentScreenTextElement.innerText = this.currentOperand;
         if (this.operation != null) {
             this.previousScreenTextElement.innerText = `${this.previousOperand} ${this.operation}`;
         }
     }
 }
+
+
 const cal = new Calculator (
     currentScreenTextElement,
     previousScreenTextElement
